@@ -1,6 +1,5 @@
-html {
+body {
     background-color: #555;
-
 }
 
 .tree-view > li {
@@ -28,4 +27,10 @@ html {
 
 .quote {
     text-align: center;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
 }

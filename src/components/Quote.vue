@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import { generateId } from '../data/utils';
+import { generateId } from '../data/Utils';
 import Window from './Window.vue';
 
 const data = ref({ content: "Loading", author: "Loading" });

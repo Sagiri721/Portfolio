@@ -7,7 +7,7 @@ const props = defineProps(['id']);
 <template>
     <Window
         :id="props.id"
-        title="Inspirational Quote"
+        title="Linguistic Qualifications"
         :resizeable="true"
         :closeable="true"
         :size="{ width: 250, height: undefined }"

@@ -1,6 +1,8 @@
-import { createApp, ref } from "vue";
+import { computed, createApp, ref } from "vue";
 import Quote from "../components/Quote.vue";
 import Linguistics from "../components/Linguistics.vue";
+import Info from "../components/Info.vue";
+import Terminal from "../components/Terminal.vue";
 
 const programMapping = ref({});
 const processes = ref([]);
@@ -11,6 +13,12 @@ const registerApplication = (name, program) => {
 // Add programs to memory
 registerApplication("quote", Quote);
 registerApplication("linguistics", Linguistics);
+registerApplication("system", Info);
+registerApplication("prompt", Terminal);
+
+const doesProgramExist = (name) => {
+    return programMapping.value[name] !== undefined;
+}
 
 const openProgram = (name, pid) => {
     const program = programMapping.value[name];
@@ -48,12 +56,18 @@ const closeAllPrograms = () => {
     processes.value = [];
 }
 
+const processCount = computed(() => processes.value.length);
+
 export const usePrograms = () => {
     return {
-        programMapping,
+        programMapping: programMapping.value,
+        processes: processes.value,
         registerApplication,
         openProgram,
         closeProgram,
-        closeAllPrograms
+        closeAllPrograms,
+        processCount,
+        doesProgramExist,
+        getProgramNames: () => Object.keys(programMapping.value)
     }
 }

@@ -3,7 +3,7 @@
 import { ref } from 'vue';
 import Window from './Window.vue';
 import { usePrograms } from '../composables/Programs';
-import { generateId } from '../data/utils';
+import { generateId, getVersion } from '../data/Utils';
 
 const program = usePrograms();
 
@@ -12,15 +12,9 @@ const closeAll = () => program.closeAllPrograms();
 const cpuUsage = ref(Math.floor(Math.random() * 100));
 const props = defineProps(['id', 'title', 'resizeable', 'closeable']);
 
-// Open a new window with an inspirational quote
-const newWindow = () => {
-
-    program.openProgram("quote", generateId());
-};
-
-const openLinguisticQualifications = () => {
-    program.openProgram("linguistics", generateId());
-};
+function openProgram(name) {
+    program.openProgram(name, generateId());
+}
 
 // CPU usage update
 setInterval(() => {
@@ -57,7 +51,7 @@ setInterval(() => {
                 Me!
                 <ul>
                 <li>About me</li>
-                <li @click="openLinguisticQualifications">Linguistic qualifications</li>
+                <li @click="openProgram('linguistics')">Linguistic qualifications</li>
                 <li>Curriculum Vitae</li>
                 </ul>
             </li>
@@ -72,19 +66,20 @@ setInterval(() => {
                 </ul>
                 </details>
             </li>
-            <li @click="newWindow">Open a window!</li>
+            <li @click="openProgram('quote')">Quote me!</li>
             <li>Shoot me an email</li>
         </ul>
 
         <br>
         <button @click="closeAll" class="default">Close all windows</button>
-        <button>Info</button><br>
+        <button @click="openProgram('system')">Info</button><br><br>
+        <button @click="openProgram('prompt')">Terminal</button><br>
 
         <br>
         
         <div class="status-bar">
-            <p class="status-bar-field">Press F1 for source</p>
-            <p class="status-bar-field">0.0.1</p>
+            <p class="status-bar-field">Press F2 for source</p>
+            <p class="status-bar-field"> {{ getVersion() }}</p>
             <p class="status-bar-field">CPU Usage: {{ cpuUsage }}%</p>
         </div>
     </Window>
