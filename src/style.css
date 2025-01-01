@@ -1,0 +1,31 @@
+html {
+    background-color: #555;
+
+}
+
+.tree-view > li {
+    user-select: none;
+}
+
+.tree-view > li ul:hover  {
+    
+    font-style: normal;
+}
+
+.tree-view > li ul > li:hover, .tree-view > li:hover  {
+    
+    cursor: pointer;
+    font-style: italic;
+}
+
+.window::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.473);
+    pointer-events: none;
+}
+
+.quote {
+    text-align: center;
+}
