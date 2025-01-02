@@ -64,8 +64,8 @@ onMounted(() => {
 
     const windowElement = document.getElementById(props.id + '-window');
 
-    const thisWindowWidth = (dimensions.value.width? dimensions.value.width : windowElement.clientWidth + windowElement.offsetWidth) + MARGIN;
-    const thisWindowHeight = (dimensions.value.height? dimensions.value.height : windowElement.clientHeight + windowElement.offsetHeight) + MARGIN;
+    const thisWindowWidth = (dimensions.value.width? dimensions.value.width : windowElement.clientWidth) + MARGIN;
+    const thisWindowHeight = (dimensions.value.height? dimensions.value.height : windowElement.clientHeight) + MARGIN;
 
     const windowXX = window.innerWidth - thisWindowWidth;
     const windowYY = window.innerHeight - thisWindowHeight;

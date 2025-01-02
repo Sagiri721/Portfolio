@@ -3,11 +3,12 @@ import Quote from "../components/Quote.vue";
 import Linguistics from "../components/Linguistics.vue";
 import Info from "../components/Info.vue";
 import Terminal from "../components/Terminal.vue";
+import Music from "../components/Music.vue";
 
 const programMapping = ref({});
 const processes = ref([]);
-const registerApplication = (name, program) => {
-    programMapping.value[name] = program;
+const registerApplication = (name, program, options = { singleton: false }) => {
+    programMapping.value[name] = { program, options };
 }
 
 // Add programs to memory
@@ -15,13 +16,17 @@ registerApplication("quote", Quote);
 registerApplication("linguistics", Linguistics);
 registerApplication("system", Info);
 registerApplication("prompt", Terminal);
+registerApplication("music", Music, { singleton: true });
 
 const doesProgramExist = (name) => {
     return programMapping.value[name] !== undefined;
 }
 
 const openProgram = (name, pid) => {
-    const program = programMapping.value[name];
+
+    const program = programMapping.value[name].program;
+    const options = programMapping.value[name].options;
+
     if (program == undefined) {
         console.error("Program not found: ", name);
         return;
@@ -30,10 +35,21 @@ const openProgram = (name, pid) => {
     const mountEl = document.createElement("div");
     document.getElementById("desktop").appendChild(mountEl);
 
+    if (options?.singleton) {
+
+        // Remove all other instances of the program
+        processes.value.forEach(process => {
+
+            if (process.name === name) {
+                closeProgram(process.pid);
+            }
+        });
+    }
+
     const dialog = createApp(program, {id: pid});
     dialog.mount(mountEl);
 
-    processes.value.push({pid: pid, dialog: dialog, element: mountEl});
+    processes.value.push({pid: pid, dialog: dialog, element: mountEl, name: name});
 }
 
 const closeProgram = (pid) => {

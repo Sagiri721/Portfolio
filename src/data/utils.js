@@ -31,4 +31,20 @@ const changeBackground = (color) => {
     localStorage.setItem("sagiri-portfolio-bg-color", color);
 }
 
-export { generateId, getVersion, changeBackground, loadBackgroundColor, getBackgroundColor };
+const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+};
+
+const formatSeconds = (seconds) => {
+
+    const minutes = Math.floor(seconds / 60);
+    let remainingSeconds = seconds % 60;
+
+    remainingSeconds = Math.floor(remainingSeconds);
+
+    return `${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
+}
+
+export { generateId, getVersion, changeBackground, loadBackgroundColor, getBackgroundColor, formatTime, formatSeconds };

@@ -1,6 +1,7 @@
 <script setup>
 
 import MenuBar from '../components/MenuBar.vue';
+import Music from '../components/Music.vue';
 import { generateId, loadBackgroundColor } from '../data/Utils';
 
 loadBackgroundColor();
@@ -16,15 +17,14 @@ window.addEventListener('keydown', (e) => {
 <template>
     <div>
 
-        <MenuBar 
-            :id="generateId()"
-            title="WordWideWeb"
-            :resizeable="false"
-            :closeable="false"
-        />
-
         <div id="desktop">
 
+            <MenuBar 
+                :id="generateId()"
+                title="WordWideWeb"
+                :resizeable="false"
+                :closeable="false"
+            />
         </div>
 
     </div>

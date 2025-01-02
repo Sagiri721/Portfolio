@@ -66,7 +66,15 @@ setInterval(() => {
                 </ul>
                 </details>
             </li>
-            <li @click="openProgram('quote')">Quote me!</li>
+            <li>
+                <details open>
+                <summary>Applications</summary>
+                <ul>
+                    <li @click="openProgram('quote')">Quote me!</li>
+                    <li @click="openProgram('music')">Waveform music player</li>
+                </ul>
+                </details>
+            </li>
             <li>Shoot me an email</li>
         </ul>
 

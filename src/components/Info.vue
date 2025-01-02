@@ -47,6 +47,7 @@ const saveBackground = (e) => {
         
         <p><b>System language</b>: <span class="fi fi-gb"></span></p>
         <p><b>System time</b>: {{ time }} {{ Intl.DateTimeFormat().resolvedOptions().timeZone }}</p>
+        <p><b>Source code: </b> <a href="https://github.com/Sagiri721/Portfolio">https://github.com/Sagiri721/Portfolio</a></p>
 
         <hr>
 
