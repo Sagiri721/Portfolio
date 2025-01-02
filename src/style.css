@@ -1,10 +1,11 @@
 body {
     background-color: #555;
-    /* Remove hability to select */
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none;    /* Firefox */
     -ms-user-select: none;     /* Internet Explorer/Edge */
     user-select: none;         /* Standard */
+
+    overflow: hidden;
 }
 
 .tree-view > li {
@@ -45,4 +46,12 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.bevel {
+    
+    border-top:3px solid #999;
+    border-bottom:3px solid rgb(45, 45, 45);
+    border-left:3px solid #999;
+    border-right:3px solid rgb(45, 45, 45);
 }

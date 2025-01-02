@@ -30,6 +30,8 @@ fetch(apiURL, {
         :closeable="true"
         :size="{ width: 250, height: undefined }"
     >
-        <p class="quote">{{data.content}}<hr/>- <b>{{data.author}}</b></p>
+        <p class="quote">{{data.content}} </p>
+        <hr/>
+        <p>- <b>{{data.author}}</b></p>
     </Window>
 </template>

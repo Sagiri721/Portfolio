@@ -30,12 +30,19 @@ const play = () => {
 
 const next = () => {
 
+    audio.stopAudio();
+    isPlaying.value = true;
+    
     // Get from queue circularly
     current.value = (current.value + 1) % queue.value.length;
     audio.playSong(queue.value[current.value].song);
 };
 
 const previous = () => {
+
+    audio.stopAudio();
+    isPlaying.value = true;
+
     // Get from queue circularly
     current.value = (current.value - 1 + queue.value.length) % queue.value.length;
     audio.playSong(queue.value[current.value].song);
@@ -61,7 +68,7 @@ onUnmounted(() => {
         <p class="name">{{ queue[current].name }}</p> 
         <p class="artist">{{ queue[current].artist }}</p>
 
-        <img class="album center" :src="queue[current].image" alt="album cover">
+        <img class="album center bevel" :src="queue[current].image" alt="album cover">
         <br>
         
         <div class="columns">
@@ -96,11 +103,6 @@ onUnmounted(() => {
     width: 270px;
     height: 270px;
     object-fit: cover;
-
-    border-top:3px solid rgb(255, 255, 255);
-    border-bottom:3px solid rgb(45, 45, 45);
-    border-left:3px solid rgb(255, 255, 255);
-    border-right:3px solid rgb(45, 45, 45);
 }
 
 .audio-controls {

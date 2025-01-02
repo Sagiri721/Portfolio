@@ -31,11 +31,23 @@ const songCollection = [
         artist: "Sweet Trip",
         image: "covers/velocity-design-comfort.png",
         song: "songs/chocolatte-matter.wav",
+    },
+    {
+        name: "Dear Prudence",
+        artist: "Siouxsie and the Banshees",
+        image: "covers/hyaena.jpg",
+        song: "songs/dear-prudence.wav",
+    },
+    {
+        name: "Mayonaise",
+        artist: "The Smashing Pumpkins",
+        image: "covers/siamese-dream.jpg",
+        song: "songs/mayonaise.wav",
     }
 ];
 
 const getQueue = () => {
-    
+
     // Randomize queue
     let currentIndex = songCollection.length;
     let queue = [...songCollection];

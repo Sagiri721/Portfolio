@@ -52,17 +52,32 @@ setInterval(() => {
                 <ul>
                 <li>About me</li>
                 <li @click="openProgram('linguistics')">Linguistic qualifications</li>
+                <li>Technical qualifications</li>
+                <li>Achievements</li>
                 <li>Curriculum Vitae</li>
                 </ul>
             </li>
             <li>
                 <details open>
                 <summary>Projects</summary>
+                
                 <ul>
-                    <li>Himawari2D</li>
-                    <li>GLVNE</li>
-                    <li>Basic 3D renderer</li>
-                    <li>Character archive</li>
+
+                    <li>
+                        <details open>
+                        <summary>Games</summary>
+                        
+                        <ul>
+                            <li>11th grade school project</li>
+                            <li>Hunger tower</li>
+                        </ul>
+                        </details>
+                    </li>
+
+                    <li @click="openProgram('himawari')">Himawari2D</li>
+                    <li @click="openProgram('glvne')">GLVNE</li>
+                    <li @click="openProgram('renderer')">Basic 3D renderer</li>
+                    <li @click="openProgram('chara-arquive')">Character archive</li>
                 </ul>
                 </details>
             </li>
@@ -72,6 +87,7 @@ setInterval(() => {
                 <ul>
                     <li @click="openProgram('quote')">Quote me!</li>
                     <li @click="openProgram('music')">Waveform music player</li>
+                    <li @click="openProgram('prompt')">Terminal</li>
                 </ul>
                 </details>
             </li>
@@ -80,8 +96,7 @@ setInterval(() => {
 
         <br>
         <button @click="closeAll" class="default">Close all windows</button>
-        <button @click="openProgram('system')">Info</button><br><br>
-        <button @click="openProgram('prompt')">Terminal</button><br>
+        <button @click="openProgram('system')">Info</button><br>
 
         <br>
         

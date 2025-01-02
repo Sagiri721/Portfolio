@@ -12,23 +12,23 @@ const props = defineProps(['id']);
         :closeable="true"
         :size="{ width: 250, height: undefined }"
     >
-    <p>
+    <div>
         <strong><span class="fi fi-pt"></span> Portuguese</strong>, Native speaker<br>
         <div class="progress-indicator segmented">
             <span class="progress-indicator-bar" style="width: 100%;" />
         </div>    
-    </p>
-    <p>
+    </div><br>
+    <div>
         <strong><span class="fi fi-gb"></span> English</strong>, C1 level<br>
         <div class="progress-indicator segmented">
             <span class="progress-indicator-bar" style="width: 85%;" />
         </div>
-    </p>
-    <p>
+    </div><br>
+    <div>
         <strong><span class="fi fi-jp"></span> Japanese</strong>, N2 level<br>
         <div class="progress-indicator segmented">
             <span class="progress-indicator-bar" style="width: 65%;" />
         </div>
-    </p>
+    </div>
     </Window>
 </template>

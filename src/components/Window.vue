@@ -94,10 +94,15 @@ onMounted(() => {
   }
 
 });
+
+const handleFocus = () => {
+    programs.requestFocus(props.id);
+};
+
 </script>
 
 <template>
-  <div>
+  <div @click="handleFocus">
       <div
           :id="props.id + '-window'"
           class="window"
@@ -111,7 +116,7 @@ onMounted(() => {
               top: position.y + 'px'
           }"
       >
-          <div class="title-bar" draggable="false" @mousedown="isDragging = true" :style="{ cursor: isDragging ? 'grabbing' : 'grab' }">
+          <div :class="'title-bar ' + (programs.isFocused()? '' : 'inactive')" draggable="false" @mousedown="isDragging = true" :style="{ cursor: isDragging ? 'grabbing' : 'grab' }">
               <div class="title-bar-text">{{ props.title }}</div>
 
               <div class="title-bar-controls">
@@ -139,7 +144,7 @@ onMounted(() => {
       }"
   >
       <div class="window">
-          <div class="title-bar inactive" draggable="false" @mousedown="isDragging = true" :style="{ cursor: isDragging ? 'grabbing' : 'grab' }">
+          <div :class="'title-bar ' + (programs.isFocused()? '' : 'inactive')" draggable="false" @mousedown="isDragging = true" :style="{ cursor: isDragging ? 'grabbing' : 'grab' }">
               <div class="title-bar-text">{{ props.title }}</div>
 
               <div class="title-bar-controls">

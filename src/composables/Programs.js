@@ -1,9 +1,13 @@
-import { computed, createApp, ref } from "vue";
+import { computed, createApp, ref, watch } from "vue";
 import Quote from "../components/Quote.vue";
 import Linguistics from "../components/Linguistics.vue";
 import Info from "../components/Info.vue";
 import Terminal from "../components/Terminal.vue";
 import Music from "../components/Music.vue";
+import Himawari from "../components/Projects/Himawari.vue";
+import CharaArchive from "../components/Projects/CharaArchive.vue";
+import Renderer from "../components/Projects/Renderer.vue";
+import GLVNE from "../components/Projects/GLVNE.vue";
 
 const programMapping = ref({});
 const processes = ref([]);
@@ -17,6 +21,10 @@ registerApplication("linguistics", Linguistics);
 registerApplication("system", Info);
 registerApplication("prompt", Terminal);
 registerApplication("music", Music, { singleton: true });
+registerApplication("himawari", Himawari);
+registerApplication("chara-arquive", CharaArchive);
+registerApplication("renderer", Renderer);
+registerApplication("glvne", GLVNE);
 
 const doesProgramExist = (name) => {
     return programMapping.value[name] !== undefined;
@@ -49,7 +57,16 @@ const openProgram = (name, pid) => {
     const dialog = createApp(program, {id: pid});
     dialog.mount(mountEl);
 
-    processes.value.push({pid: pid, dialog: dialog, element: mountEl, name: name});
+    processes.value.push({pid: pid, dialog: dialog, element: mountEl, name: name, focus: false});
+}
+
+const requestFocus = (pid) => {
+    
+    processes.value.forEach(process => {
+        process.focus = process.pid == pid;
+    });
+
+    updateWindowZIndex();
 }
 
 const closeProgram = (pid) => {
@@ -74,6 +91,25 @@ const closeAllPrograms = () => {
 
 const processCount = computed(() => processes.value.length);
 
+// Monitor focus state of programs reactivilly
+const updateWindowZIndex = () => {
+
+    processes.value.forEach((process) => {
+        
+        let z = process.focus ? 1 : 0;
+
+        let window = (process.element.getElementsByClassName("window")[0]);
+        window.style.zIndex = z;
+    });
+}
+
+const isFocused = (pid) => {
+
+    const process = processes.value.find(process => process.pid === pid);
+    if (process == undefined) return true;
+    return process.focus;
+}
+
 export const usePrograms = () => {
     return {
         programMapping: programMapping.value,
@@ -84,6 +120,8 @@ export const usePrograms = () => {
         closeAllPrograms,
         processCount,
         doesProgramExist,
-        getProgramNames: () => Object.keys(programMapping.value)
+        getProgramNames: () => Object.keys(programMapping.value),
+        requestFocus,
+        isFocused,
     }
 }

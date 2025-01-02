@@ -1,5 +1,6 @@
 import { generateId } from "../data/Utils";
 import { usePrograms } from "./Programs";
+import confetti from "https://cdn.skypack.dev/canvas-confetti";
 
 var programs = null;
 
@@ -10,13 +11,28 @@ const commandList = [
         args: []
     },
     {
-        name: "run",
+        name: "call",
         description: "Run a given program.",
         args: ["program name"]
     },
     {
         name: "programs",
         description: "List of available programs.",
+        args: []
+    },
+    {
+        name: "date",
+        description: "Display the current date.",
+        args: []
+    },
+    {
+        name: "echo",
+        description: "Echo the given message.",
+        args: ["message"]
+    },
+    {
+        name: "confetti",
+        description: "Drop confetti.",
         args: []
     }
 ];
@@ -43,7 +59,7 @@ async function interpret(command) {
             return `Available commands: \n${
                 commandList.map(command => command.name + ": " + command.description + " Args: " + (command.args.join(", ") || "None")).join("\n")
             }`;
-        case "run":
+        case "call":
             
             if (args.length === 0) return "Invalid syntax, no program given.";
             const program = args[0];
@@ -57,6 +73,22 @@ async function interpret(command) {
 
             const programNames = programs.getProgramNames();
             return `Available programs: \n${programNames.join("\n")}`;
+
+        case "date":
+            return new Date().toDateString();
+        case "echo":
+
+            if (args.length === 0) return "Invalid syntax, no message given.";
+            return args.join(" ");
+
+        case "confetti":
+
+            confetti({
+                particleCount: 130,
+                spread: 70,
+            });
+
+            return "Yippie!";
 
         default:
             return "Invalid command.";
