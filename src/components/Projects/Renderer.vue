@@ -21,6 +21,8 @@ const props = defineProps(['id']);
         <p class="status-bar-field">Source: Unavailable</p>
     </div>
 
+    <br>
+<!-- 
     <p>Due to frustrations with a bug and university work taking over my time, I never took this project to it's fullest potential, although it is still able to: </p>
     <ul>
         <li>Read and diplay simple wavefront files</li>
@@ -29,7 +31,7 @@ const props = defineProps(['id']);
         <li>Render a camera view</li>
         <li>Render a direct light source</li>
         <li>Cut offscreen triangles</li>
-    </ul>
+    </ul> -->
 
     <img class="full-image bevel" src="../../assets/projects/r-example-1.gif" alt="two objects spinning">
     <p class="legend">Fig1 - A Utah teapot and a cube rotating and overlapping</p>

@@ -23,13 +23,14 @@ body {
     font-style: italic;
 }
 
-.window::after {
+.window-shadow::after {
     content: '';
     position: absolute;
     inset: 0;
     box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.473);
     pointer-events: none;
 }
+
 
 .quote {
     text-align: center;

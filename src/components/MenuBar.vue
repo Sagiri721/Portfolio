@@ -12,8 +12,8 @@ const closeAll = () => program.closeAllPrograms();
 const cpuUsage = ref(Math.floor(Math.random() * 100));
 const props = defineProps(['id', 'title', 'resizeable', 'closeable']);
 
-function openProgram(name) {
-    program.openProgram(name, generateId());
+function openProgram(name, options = {}) {
+    program.openProgram(name, generateId(), options);
 }
 
 // CPU usage update
@@ -52,9 +52,9 @@ setInterval(() => {
                 <ul>
                 <li>About me</li>
                 <li @click="openProgram('linguistics')">Linguistic qualifications</li>
-                <li>Technical qualifications</li>
+                <li @click="openProgram('technical')">Technical qualifications</li>
                 <li>Achievements</li>
-                <li>Curriculum Vitae</li>
+                <li @click="openProgram('warning', { message: 'Coming soon', type: 0 })">Curriculum Vitae</li>
                 </ul>
             </li>
             <li>
@@ -87,6 +87,7 @@ setInterval(() => {
                 <ul>
                     <li @click="openProgram('quote')">Quote me!</li>
                     <li @click="openProgram('music')">Waveform music player</li>
+                    <!--<li @click="openProgram('explorer', {url: 'about:blank'})">Internet explorer</li>-->
                     <li @click="openProgram('prompt')">Terminal</li>
                 </ul>
                 </details>

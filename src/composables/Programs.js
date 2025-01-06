@@ -8,6 +8,8 @@ import Himawari from "../components/Projects/Himawari.vue";
 import CharaArchive from "../components/Projects/CharaArchive.vue";
 import Renderer from "../components/Projects/Renderer.vue";
 import GLVNE from "../components/Projects/GLVNE.vue";
+import Technical from "../components/Technical.vue";
+import Warning from "../components/Warning.vue";
 
 const programMapping = ref({});
 const processes = ref([]);
@@ -25,12 +27,14 @@ registerApplication("himawari", Himawari);
 registerApplication("chara-arquive", CharaArchive);
 registerApplication("renderer", Renderer);
 registerApplication("glvne", GLVNE);
+registerApplication("technical", Technical);
+registerApplication("warning", Warning);
 
 const doesProgramExist = (name) => {
     return programMapping.value[name] !== undefined;
 }
 
-const openProgram = (name, pid) => {
+const openProgram = (name, pid, props = {}) => {
 
     const program = programMapping.value[name].program;
     const options = programMapping.value[name].options;
@@ -54,7 +58,11 @@ const openProgram = (name, pid) => {
         });
     }
 
-    const dialog = createApp(program, {id: pid});
+    console.log("Opening program: ", name, pid, props);
+    console.log({id: pid, ...props });
+    const dialog = createApp(program, 
+        {id: pid, ...props }
+    );
     dialog.mount(mountEl);
 
     processes.value.push({pid: pid, dialog: dialog, element: mountEl, name: name, focus: false});

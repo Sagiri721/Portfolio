@@ -15,13 +15,15 @@ const props = defineProps(['id']);
     
     <h3>Himawari2D</h3>
     <p>Himawari2D is a small 2D game engine I developed as a Professional Aptitude Project (PAP) in my last year of highschool.</p>
+    <p>Although limited, Himawari is capable of powering basic games that don't require much computational power</p>
     <div class="status-bar">
         <p class="status-bar-field">Made using: Java, C++</p>
         <p class="status-bar-field">Status: <span class="good">Released</span></p>
         <p class="status-bar-field">Source: <a href="https://github.com/Sagiri721/Himawari-2d">Github</a></p>
     </div>
 
-    <p>Although limited, Himawari is capable of powering basic games that don't require much computational power, here are some of it's features:</p>
+    <br>
+<!-- 
     <div class="columns">
         <div>
             <ul>
@@ -42,7 +44,7 @@ const props = defineProps(['id']);
                 <li>Extremely bare bones multiplayer framework</li>
             </ul>
         </div>
-    </div>
+    </div> -->
 
     <p>Himawari also comes with a basic <a href="https://github.com/Sagiri721/Himawari-SDK">GUI</a> and markdown <a href="https://github.com/Sagiri721/Himawari-Docs">markdown documentation</a></p>
 

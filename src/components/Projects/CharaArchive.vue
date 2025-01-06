@@ -28,14 +28,15 @@ function gotoSite() {
 
     <br>
     <button @click="gotoSite">Open the character archive</button>
+    <br><br>
 
-    <p>The character archive currently only supports editable characters, but many of a character's attributes can be edited like their name, age, gender, birthday, likes, dislikes, etc...</p>
+    <!-- <p>The character archive currently only supports editable characters, but many of a character's attributes can be edited like their name, age, gender, birthday, likes, dislikes, etc...</p>
     <ul>
         <li>It supports multiple creators on a single character</li>
         <li>People can submit creator applications</li>
         <li>It allows both public and private world</li>
         <li>It has a relationship system between characters</li>
-    </ul>
+    </ul> -->
     
     <img class="small-image bevel" src="../../assets/projects/ca-example-1.png" alt="character archive">
     <p class="legend">Fig1 - Relationships between characters examplified</p>

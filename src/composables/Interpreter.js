@@ -34,6 +34,11 @@ const commandList = [
         name: "confetti",
         description: "Drop confetti.",
         args: []
+    },
+    {
+        name: "warn",
+        description: "Display a warning message.",
+        args: ["message", "type (number from 0 to 3)"]
     }
 ];
 
@@ -89,6 +94,23 @@ async function interpret(command) {
             });
 
             return "Yippie!";
+
+        case "warn":
+
+            if (args.length === 0) return "Invalid syntax, no message given.";
+
+            let lastIndex = args.length - 1;
+
+            const type = args[lastIndex] || 0;
+            if (isNaN(type)) return "Invalid type, must be a number from 0 to 3.";
+
+            const message = args.slice(0, lastIndex).join(" ");
+
+            if (type < 0 || type > 3) return "Invalid type, must be a number from 0 to 3.";
+
+            programs.openProgram("warning", generateId(), { message: message, type: type });
+
+            return "Warning displayed.";
 
         default:
             return "Invalid command.";

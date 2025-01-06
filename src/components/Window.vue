@@ -93,6 +93,8 @@ onMounted(() => {
     document.getElementById(props.id).innerHTML = props.data.html;
   }
 
+  programs.requestFocus(props.id);
+
 });
 
 const handleFocus = () => {
@@ -105,7 +107,7 @@ const handleFocus = () => {
   <div @click="handleFocus">
       <div
           :id="props.id + '-window'"
-          class="window"
+          class="window window-shadow"
           :style="{
               display: minimized ? 'none' : 'block',
               position: 'absolute',
