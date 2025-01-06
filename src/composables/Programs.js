@@ -10,6 +10,8 @@ import Renderer from "../components/Projects/Renderer.vue";
 import GLVNE from "../components/Projects/GLVNE.vue";
 import Technical from "../components/Technical.vue";
 import Warning from "../components/Warning.vue";
+import Achievements from "../components/Achievements.vue";
+import Me from "../components/Me.vue";
 
 const programMapping = ref({});
 const processes = ref([]);
@@ -29,6 +31,8 @@ registerApplication("renderer", Renderer);
 registerApplication("glvne", GLVNE);
 registerApplication("technical", Technical);
 registerApplication("warning", Warning);
+registerApplication("achievements", Achievements);
+registerApplication("me", Me);
 
 const doesProgramExist = (name) => {
     return programMapping.value[name] !== undefined;

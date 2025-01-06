@@ -1,6 +1,6 @@
 import { generateId } from "../data/Utils";
 import { usePrograms } from "./Programs";
-import confetti from "https://cdn.skypack.dev/canvas-confetti";
+import confetti from "canvas-confetti";
 
 var programs = null;
 

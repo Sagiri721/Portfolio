@@ -47,4 +47,19 @@ const formatSeconds = (seconds) => {
     return `${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
 }
 
-export { generateId, getVersion, changeBackground, loadBackgroundColor, getBackgroundColor, formatTime, formatSeconds };
+const myAge = () => {
+
+    const birthdate = new Date("2005-07-19");
+    const today = new Date();
+
+    const age = today.getFullYear() - birthdate.getFullYear();
+    const month = today.getMonth() - birthdate.getMonth();
+
+    if (month < 0 || (month === 0 && today.getDate() < birthdate.getDate())) {
+        return age - 1;
+    }
+
+    return age;
+}
+
+export { generateId, getVersion, changeBackground, loadBackgroundColor, getBackgroundColor, formatTime, formatSeconds, myAge };

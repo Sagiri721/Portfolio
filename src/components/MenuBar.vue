@@ -50,10 +50,10 @@ setInterval(() => {
             <li>
                 Me!
                 <ul>
-                <li>About me</li>
+                <li @click="openProgram('me')">About me</li>
                 <li @click="openProgram('linguistics')">Linguistic qualifications</li>
                 <li @click="openProgram('technical')">Technical qualifications</li>
-                <li>Achievements</li>
+                <li @click="openProgram('achievements')">Achievements</li>
                 <li @click="openProgram('warning', { message: 'Coming soon', type: 0 })">Curriculum Vitae</li>
                 </ul>
             </li>
@@ -68,8 +68,8 @@ setInterval(() => {
                         <summary>Games</summary>
                         
                         <ul>
-                            <li>11th grade school project</li>
-                            <li>Hunger tower</li>
+                            <li @click="openProgram('warning', { message: 'Tive preguiça!', type: 1 })">11th grade school project</li>
+                            <li @click="openProgram('warning', { message: 'Tive preguiça!', type: 1 })">Hunger tower</li>
                         </ul>
                         </details>
                     </li>
@@ -92,7 +92,7 @@ setInterval(() => {
                 </ul>
                 </details>
             </li>
-            <li>Shoot me an email</li>
+            <a href="mailto:tiagobarrossao@gmail.com">Shoot me an email!</a>
         </ul>
 
         <br>
