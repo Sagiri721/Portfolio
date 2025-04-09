@@ -79,10 +79,9 @@ const tab = ref('pl');
                         <ul>
                             <li>PHP</li>
                             <li>Assembly x86</li>
-                            <li>Lua</li>
-                            <li>Rust</li>
                             <li>Pascal</li>
                             <li>VBA</li>
+                            <li>GLSL</li>
                         </ul>
                 </div>
             </div>
@@ -125,34 +124,6 @@ const tab = ref('pl');
           </div>
 
             <div v-else-if="tab == 'la'" class="window-body">
-                
-                <!-- 
-                    - Git
-                    - PlantUML
-                    - GnuPlot
-                    - Make / CMake
-                    - Maven
-                    - Node.js
-                    
-                    - SDL 2(C / C++)
-                    - Crow (C++)
-                    - ImGui (C++)
-                    - Detours (C++)
-                    - .NET (C#)
-                    - Windows Forms (C#)
-                    - Disord.py (Python)
-                    - PIL (Python)
-                    - BeautifulSoup (Python)
-                    - Pandas (Python)
-                    - Scipy (Python)
-                    - JUnit (Java)
-                    - Jsoup (Java)
-                    - JDBC (Java)
-                    - Swing & JavaFX (Java)
-                    - Guava (Java)
-                    - Electron (JavaScript)
-                    - Express (JavaScript)
-                -->
 
                 <div class="columns lib-container">
 
@@ -166,13 +137,12 @@ const tab = ref('pl');
                                     <div class="columns close">
 
                                         <div>
-                                            <li>JUnit</li>
                                             <li>Jsoup</li>
                                             <li>JDBC</li>
+                                            <li>Swing & JavaFX</li>
                                         </div>
                                         <div>
-                                            <li>Swing & JavaFX</li>
-                                            <li>Guava</li>
+                                            <li>LWJGL</li>
                                         </div>
 
                                     </div>
@@ -219,6 +189,11 @@ const tab = ref('pl');
                                     <li>SDL 2</li>
                                     <li>Crow</li>
                                     <li>Detours</li>
+                                </ul>
+
+                                <ul>
+                                    <li>OpenGL</li>
+                                    <li>Unity</li>
                                 </ul>
 
                             </div>

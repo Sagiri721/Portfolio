@@ -55,6 +55,7 @@ const saveBackground = (e) => {
         <p><strong>Powered by: </strong> Vue & Vite</p>
         <p><strong>Graphics: </strong> <a href="https://jdan.github.io/98.css/">98.css</a> </p>
         <p><strong>Flags: </strong> <a href="https://github.com/lipis/flag-icons">Lipis flag icons</a> </p>
+        <p><strong>Cursor: </strong> <a href="https://void1gaming.itch.io/free-basic-cursor-pack">Win95 cursor pack</a></p>
 
         <hr>
         <p><b>System background</b></p>

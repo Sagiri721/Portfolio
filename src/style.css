@@ -6,6 +6,11 @@ body {
     user-select: none;         /* Standard */
 
     overflow: hidden;
+
+    /* cursor: url('cursors/Win95Def.png'), default;
+    cursor: url('cursors/Win95DefHand.png'), help;
+    cursor: url('cursors/Win95DefLoad.png'), wait;
+    cursor: url('cursors/Win95DefHand.png'), grab; */
 }
 
 .tree-view > li {

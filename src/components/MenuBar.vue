@@ -1,6 +1,6 @@
 <script setup>
 
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import Window from './Window.vue';
 import { usePrograms } from '../composables/Programs';
 import { generateId, getVersion } from '../data/Utils';
@@ -15,6 +15,12 @@ const props = defineProps(['id', 'title', 'resizeable', 'closeable']);
 function openProgram(name, options = {}) {
     program.openProgram(name, generateId(), options);
 }
+
+onMounted(() => {
+    openProgram("zoom", {
+        start_position: { x: 10, y: 470 }
+    });
+});
 
 // CPU usage update
 setInterval(() => {

@@ -49,6 +49,12 @@ const songCollection = [
         artist: "The Cure",
         image: "covers/disintegration.jpg",
         song: "songs/pictures-of-you.mp3",
+    },
+    {
+        name: "The great gig in the sky",
+        artist: "Pink Floyd",
+        image: "covers/dark-side-of-the-moon.png",
+        song: "songs/the-great-gig-in-the-sky.mp3",
     }
 ];
 

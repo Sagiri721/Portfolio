@@ -12,6 +12,7 @@ import Technical from "../components/Technical.vue";
 import Warning from "../components/Warning.vue";
 import Achievements from "../components/Achievements.vue";
 import Me from "../components/Me.vue";
+import Zoom from "../components/Zoom.vue";
 
 const programMapping = ref({});
 const processes = ref([]);
@@ -33,6 +34,7 @@ registerApplication("technical", Technical);
 registerApplication("warning", Warning);
 registerApplication("achievements", Achievements);
 registerApplication("me", Me);
+registerApplication("zoom", Zoom, { singleton: true });
 
 const doesProgramExist = (name) => {
     return programMapping.value[name] !== undefined;

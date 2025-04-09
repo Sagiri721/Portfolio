@@ -49,7 +49,7 @@ const formatSeconds = (seconds) => {
 
 const myAge = () => {
 
-    const birthdate = new Date("2005-07-19");
+    const birthdate = new Date("2005-07-21");
     const today = new Date();
 
     const age = today.getFullYear() - birthdate.getFullYear();

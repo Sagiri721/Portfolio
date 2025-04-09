@@ -16,7 +16,7 @@ const props = defineProps(['id']);
     <h3>3D Renderer</h3>
     <p>A basic 3D renderer originally made to be an extension of the Himawari game engine.</p>
     <div class="status-bar">
-        <p class="status-bar-field">Made using: Java, SDL2</p>
+        <p class="status-bar-field">Made using: Java, OpenGL</p>
         <p class="status-bar-field">Status: <span class="bad">Stalled</span></p>
         <p class="status-bar-field">Source: Unavailable</p>
     </div>

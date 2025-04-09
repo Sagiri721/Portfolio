@@ -25,6 +25,7 @@ window.addEventListener('keydown', (e) => {
                 :resizeable="false"
                 :closeable="false"
             />
+
         </div>
 
     </div>

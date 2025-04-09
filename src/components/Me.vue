@@ -32,11 +32,10 @@ function openMusicPlayer() {
 
                 <p class="body">
                     I'm a {{ myAge() }} years old Computer Science student.
-                    I'm passionate about <b>game development</b>, <b>graphics programming</b>, and old computers and consoles.
+                    I'm passionate about <b>game development</b>, <b>graphics programming</b> and <b>systems programming</b>! <br>
+                    I also have a soft spot for <b>math</b>, <b>illustration</b> and <b>music</b> :D<br>
         
-                    <br>
-        
-                    I learned to code with Gamemaker studio when I was 14 and I've been making stuff ever since.
+                    I learned to code with GameMaker 7 when I was around 14 and I've been making stuff ever since.
                 </p>
 
                 <p class="body">
@@ -54,7 +53,7 @@ function openMusicPlayer() {
 
             </div>
 
-            <img class="bevel" src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg" alt="A picture of me">
+            <img class="bevel" src="../assets/img/Cropped_Image.jpg" alt="A picture of me">
         </div>
 
     </Window>
