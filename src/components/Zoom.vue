@@ -26,7 +26,7 @@ watch(zoom, () => {
 
         <div class="columns">
             <button @click="zoom = Math.max(50, zoom - 10)">Zoom out</button>
-            <button @click="zoom = Math.min(200, zoom + 10)">Zoom in</button>
+            <button @click="zoom = Math.min(150, zoom + 10)">Zoom in</button>
             <button @click="zoom = 100">Reset</button>
         </div>
     </div>

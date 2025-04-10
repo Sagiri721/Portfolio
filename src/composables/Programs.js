@@ -13,6 +13,9 @@ import Warning from "../components/Warning.vue";
 import Achievements from "../components/Achievements.vue";
 import Me from "../components/Me.vue";
 import Zoom from "../components/Zoom.vue";
+import NoNameGame from "../components/Projects/NoNameGame.vue";
+import HungerTower from "../components/Projects/HungerTower.vue";
+import CelesteMods from "../components/Projects/CelesteMods.vue";
 
 const programMapping = ref({});
 const processes = ref([]);
@@ -35,6 +38,9 @@ registerApplication("warning", Warning);
 registerApplication("achievements", Achievements);
 registerApplication("me", Me);
 registerApplication("zoom", Zoom, { singleton: true });
+registerApplication("nonamegame", NoNameGame);
+registerApplication("hungertower", HungerTower);
+registerApplication("celestemods", CelesteMods);
 
 const doesProgramExist = (name) => {
     return programMapping.value[name] !== undefined;

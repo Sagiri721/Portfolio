@@ -74,8 +74,9 @@ setInterval(() => {
                         <summary>Games</summary>
                         
                         <ul>
-                            <li @click="openProgram('warning', { message: 'Tive preguiça!', type: 1 })">11th grade school project</li>
-                            <li @click="openProgram('warning', { message: 'Tive preguiça!', type: 1 })">Hunger tower</li>
+                            <li @click="openProgram('nonamegame')">11th grade school project</li>
+                            <li @click="openProgram('hungertower')">Hunger tower</li>
+                            <li @click="openProgram('celestemods')">Celeste modding</li>
                         </ul>
                         </details>
                     </li>

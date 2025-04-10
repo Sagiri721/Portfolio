@@ -14,8 +14,8 @@ const props = defineProps(['id']);
     >
     
     <h3>GLVNE</h3>
-    <p>GLVNE is what we are calling our <a href="https://www.raylib.com/">Raylib</a> library to allow any type of creator to easily create visual novels / sound novels / adventure games.</p>
-    <p>This project is inspired by the likes of <a href="https://www.renpy.org/">Renpy</a> but we aim to make it more artistically (and programmatically) customizable, with features like: </p>
+    <p>GLVNE is what we are calling our <a href="https://www.raylib.com/">Raylib</a> library to allow any type of creative to easily create visual novels / sound novels / adventure games.</p>
+    <p>This project is inspired by the likes of <a href="https://www.renpy.org/">Renpy</a> but we aim to make it more artistically (and programmatically) customizable.</p>
     <div class="status-bar">
         <p class="status-bar-field">Made using: C++, Raylib</p>
         <p class="status-bar-field">Status: <span class="wip">WIP</span></p>

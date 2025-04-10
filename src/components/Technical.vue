@@ -251,11 +251,6 @@ const tab = ref('pl');
                                     <p>Build automation tool</p>
                                 </div>
 
-                                <div>
-                                    <p><b>Node.js</b></p>
-                                    <p>Runtime environment</p>
-                                </div>
-
                             </div>
 
                         </p>

@@ -1,5 +1,5 @@
-# Vue 3 + Vite
+# My portfolio!
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+An interactive site made to display my projects inspired by the 1990 Cern WorldWideWeb and the Windows 98 operating system! <br>
+Have fun browsing my stuff with some extras like a temrinal and a music player for amusement ;).
+![Demo image](image.png)
