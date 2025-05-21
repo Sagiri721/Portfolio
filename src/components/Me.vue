@@ -53,7 +53,7 @@ function openMusicPlayer() {
 
             </div>
 
-            <img class="bevel" src="../assets/img/Cropped_Image.jpg" alt="A picture of me">
+            <img class="bevel" src="../assets/img/Cropped_Image.png" alt="A picture of me">
         </div>
 
     </Window>
