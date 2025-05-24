@@ -60,7 +60,7 @@ setInterval(() => {
                 <li @click="openProgram('linguistics')">Linguistic qualifications</li>
                 <li @click="openProgram('technical')">Technical qualifications</li>
                 <li @click="openProgram('achievements')">Achievements</li>
-                <li @click="openProgram('warning', { message: 'Coming soon', type: 0 })">Curriculum Vitae</li>
+                <li><a href='tiagobarrossimoes_cv_09_5_2025.pdf'>Curriculum Vitae</a></li>
                 </ul>
             </li>
             <li>
