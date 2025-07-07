@@ -52,6 +52,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 .bevel {
@@ -60,4 +61,24 @@ body {
     border-bottom:3px solid rgb(45, 45, 45);
     border-left:3px solid #999;
     border-right:3px solid rgb(45, 45, 45);
+}
+
+.animated-window {
+
+    animation: openWindow 0.2s ease-out;
+}
+
+/*
+    Open window animation
+*/
+@keyframes openWindow {
+
+    from {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }

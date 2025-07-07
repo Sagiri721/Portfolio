@@ -25,9 +25,9 @@ const props = defineProps(['id']);
         </div>
     </div><br>
     <div>
-        <strong><span class="fi fi-jp"></span> Japanese</strong>, N2 level<br>
+        <strong><span class="fi fi-jp"></span> Japanese</strong>, N3 level<br>
         <div class="progress-indicator segmented">
-            <span class="progress-indicator-bar" style="width: 65%;" />
+            <span class="progress-indicator-bar" style="width: 55%;" />
         </div>
     </div>
     </Window>

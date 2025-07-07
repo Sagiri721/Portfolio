@@ -42,11 +42,19 @@ const mouse = ref({ x: 0, y: 0 });
 window.addEventListener('mousemove', (event) => {
 
     if (isDragging.value) {
+
+        const zoomValue = document.body.style.zoom || 1;
+        let zoomPercentage = 1; // Default zoom value
+        if (typeof zoomValue === 'string' && zoomValue.endsWith('%')) 
+            zoomPercentage = parseFloat(zoomValue) / 100;
+
+        console.log('Zoom percentage:', zoomPercentage);
+
         // Handle dragging event
         const xx = event.clientX - mouse.value.x;
         const yy = event.clientY - mouse.value.y;
-        position.value.x += xx;
-        position.value.y += yy;
+        position.value.x += xx / zoomPercentage;
+        position.value.y += yy / zoomPercentage;
     }
     
     // Always update mouse positions

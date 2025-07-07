@@ -17,8 +17,13 @@ function openProgram(name, options = {}) {
 }
 
 onMounted(() => {
-    openProgram("zoom", {
-        start_position: { x: 10, y: 470 }
+
+    openProgram("zoom", {start_position: { x: 10, y: 470 } });
+
+    openProgram("me", {start_position: { x: 680, y: 10 } });
+    openProgram("images", {
+        url: "/Portfolio/img/Cropped_Image.jpg", title: "A picture of me", width: 300,
+        start_position: { x:330 , y: 10 }
     });
 });
 

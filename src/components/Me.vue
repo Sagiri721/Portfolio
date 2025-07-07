@@ -10,6 +10,12 @@ function openMusicPlayer() {
     program.openProgram('music', generateId());
 }
 
+// Open image
+/*program.openProgram("images", generateId(), {
+    url: "/Portfolio/img/Cropped_Image.jpg", title: "A picture of me", width: 300,
+    start_position { y: }
+});*/
+
 </script>
 
 <template>
@@ -18,7 +24,7 @@ function openMusicPlayer() {
         title="Sagiri721"
         :resizeable="true"
         :closeable="true"
-        :size="{ width: 700, height: undefined }"
+        :size="{ width: 420, height: undefined }"
     >
     
         <div class="columns square">    
@@ -33,13 +39,12 @@ function openMusicPlayer() {
                 <p class="body">
                     I'm a {{ myAge() }} years old Computer Science student.
                     I'm passionate about <b>game development</b>, <b>graphics programming</b> and <b>systems programming</b>! <br>
-                    I also have a soft spot for <b>math</b>, <b>illustration</b> and <b>music</b> :D<br>
+                    I also have a soft spot for <b>math</b>, <b>illustration</b> and <b>music.</b><br>
         
                     I learned to code with GameMaker 7 when I was around 14 and I've been making stuff ever since.
                 </p>
 
                 <p class="body">
-                    <br>
                     <p>If anything comes up you can contact me through <a href="mailto:tiagobarrossao@gmail.com">email</a> or <a href="https://www.linkedin.com/in/tiago-barros-197aab2aa/">LinkedIn</a></p>
         
                     <p>Without further ado, Welcome to my portfolio! I hope you enjoy your stay. <br> Listen to some music while you're here!</p> 
@@ -53,7 +58,7 @@ function openMusicPlayer() {
 
             </div>
 
-            <img class="bevel" src="../assets/img/Cropped_Image.png" alt="A picture of me">
+            <!-- <img class="bevel" src="../assets/img/Cropped_Image.jpg" alt="A picture of me" /> -->
         </div>
 
     </Window>

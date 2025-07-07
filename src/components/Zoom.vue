@@ -6,7 +6,6 @@ const props = defineProps(['id']);
 const zoom = ref(100);
 
 watch(zoom, () => {
-
     document.body.style.zoom = `${zoom.value}%`;
 });
 
