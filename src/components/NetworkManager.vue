@@ -17,39 +17,39 @@ const props = defineProps(['id']);
         <div class="network">
 
             <div class="network-node" style="left: 10px; top: 30px;">
-                <img src="/Portfolio/icons/computer-4.png" alt="">
+                <img src="/icons/computer-4.png" alt="">
                 <p>Github</p>
                 <a href="https://github.com/Sagiri721">@Sagiri721</a>
             </div>
 
             <div class="network-node" style="left: 330px; top: 10;">
-                <img src="/Portfolio/icons/world-2.png" alt="">
+                <img src="/icons/world-2.png" alt="">
                 <p>LinkedIn</p>
                 <a href="https://www.linkedin.com/in/tiago-barros-197aab2aa/">Tiago</a>
                 <a href="https://www.linkedin.com/in/tiago-barros-197aab2aa/">Barros</a>
             </div>
 
             <div class="network-node" style="left: 150px; top: 50px;">
-                <img src="/Portfolio/icons/computer-4.png" alt="">
+                <img src="/icons/computer-4.png" alt="">
                 <p>Youtube</p>
                 <a href="https://www.youtube.com/@sagiri721">@sagiri721</a>
             </div>
 
             <div class="network-node" style="left: 20px; top: 150px;">
-                <img src="/Portfolio/icons/modem-4.png" alt="">
+                <img src="/icons/modem-4.png" alt="">
                 <p>Email</p>
                 <a href="mailto:tiagobarrossao@gmail.com">tiagobarrossao@gmail.com</a>
             </div>
 
 
             <div class="network-node" style="left: 170px; top: 230px;">
-                <img src="/Portfolio/icons/joystick-5.png" alt="">
+                <img src="/icons/joystick-5.png" alt="">
                 <p>Itch.io</p>
                 <a href="https://sagiri721.itch.io/">Sagiri721</a>
             </div>
 
             <div class="network-node" style="left: 320px; top: 190px;">
-                <img src="/Portfolio/icons/modem-4.png" alt="">
+                <img src="/icons/modem-4.png" alt="">
                 <p>Discord</p>
                 <a href="#">@llamezine</a>
             </div>

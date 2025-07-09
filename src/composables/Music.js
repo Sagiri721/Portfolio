@@ -17,43 +17,43 @@ const songCollection = [
     {
         name: "Everyone Knows",
         artist: "Slowdive",
-        image: "/Portfolio/covers/slowdive.jpg",
+        image: "covers/slowdive.jpg",
         song: "songs/everyone-knows.mp3",
     },
     {
         name: "Hold on",
         artist: "John Lennon",
-        image: "/Portfolio/covers/plastic-ono-band.jpg",
+        image: "covers/plastic-ono-band.jpg",
         song: "songs/hold-on.mp3",
     },
     {
         name: "Chocolate Matter",
         artist: "Sweet Trip",
-        image: "/Portfolio/covers/velocity-design-comfort.png",
+        image: "covers/velocity-design-comfort.png",
         song: "songs/chocolatte-matter.mp3",
     },
     {
         name: "Dear Prudence",
         artist: "Siouxsie and the Banshees",
-        image: "/Portfolio/covers/hyaena.jpg",
+        image: "covers/hyaena.jpg",
         song: "songs/dear-prudence.mp3",
     },
     {
         name: "Mayonaise",
         artist: "The Smashing Pumpkins",
-        image: "/Portfolio/covers/siamese-dream.jpg",
+        image: "covers/siamese-dream.jpg",
         song: "songs/mayonaise.mp3",
     },
     {
         name: "Pictures of You",
         artist: "The Cure",
-        image: "/Portfolio/covers/disintegration.jpg",
+        image: "covers/disintegration.jpg",
         song: "songs/pictures-of-you.mp3",
     },
     {
         name: "The great gig in the sky",
         artist: "Pink Floyd",
-        image: "/Portfolio/covers/dark-side-of-the-moon.png",
+        image: "covers/dark-side-of-the-moon.png",
         song: "songs/the-great-gig-in-the-sky.mp3",
     }
 ];

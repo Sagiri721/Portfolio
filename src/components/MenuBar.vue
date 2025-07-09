@@ -22,7 +22,7 @@ onMounted(() => {
 
     openProgram("me", {start_position: { x: 680, y: 10 } });
     openProgram("images", {
-        url: "/Portfolio/img/Cropped_Image.jpg", title: "A picture of me", width: 300,
+        url: "img/Cropped_Image.jpg", title: "A picture of me", width: 300,
         start_position: { x:330 , y: 10 }
     });
 });

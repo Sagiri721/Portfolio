@@ -3,7 +3,7 @@ import Window from './Window.vue';
 
 const props = defineProps(['id', 'url', 'width', 'height', 'title']); 
 
-const url = props.url || '/Portfolio/img/missing.png';
+const url = props.url || 'img/missing.png';
 const width = props.width || 20;
 
 </script>
