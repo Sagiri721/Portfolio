@@ -17,6 +17,7 @@ import NoNameGame from "../components/Projects/NoNameGame.vue";
 import HungerTower from "../components/Projects/HungerTower.vue";
 import CelesteMods from "../components/Projects/CelesteMods.vue";
 import ImageDisplay from "../components/ImageDisplay.vue";
+import NetworkManager from "../components/NetworkManager.vue";
 
 const programMapping = ref({});
 const processes = ref([]);
@@ -43,6 +44,7 @@ registerApplication("nonamegame", NoNameGame);
 registerApplication("hungertower", HungerTower);
 registerApplication("celestemods", CelesteMods);
 registerApplication("images", ImageDisplay);
+registerApplication("network", NetworkManager);
 
 const doesProgramExist = (name) => {
     return programMapping.value[name] !== undefined;

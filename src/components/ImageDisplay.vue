@@ -3,7 +3,6 @@ import Window from './Window.vue';
 
 const props = defineProps(['id', 'url', 'width', 'height', 'title']); 
 
-const text = props.text || 'Image not found';
 const url = props.url || '/Portfolio/img/missing.png';
 const width = props.width || 20;
 
