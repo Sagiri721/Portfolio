@@ -10,7 +10,7 @@ const loadBackgroundColor = () => {
     const color = localStorage.getItem("sagiri-portfolio-bg-color");
     
     if (color) 
-        document.body.style.backgroundColor = backgroundColors[color];
+        changeBackground(color);
 }
 
 const getBackgroundColor = () => {
@@ -22,12 +22,40 @@ const backgroundColors = {
     "Black": "#000000",
     "White": "#DCDCDC ",
     "Blue": "#778899",
-    "Red": "#AA98A9"
+    "Red": "#AA98A9",
+    "Biblically accurate": "#008080",
+    "Wrong era": {
+        "url": "windows_xp_bliss-wide.jpg",
+        "colour": "#87CEEB"
+    },
+    "Frutiger Aero": {
+        "url": "asadal_stock_79.jpg",
+        "colour": "darkblue"
+    },
 }
 
 const changeBackground = (color) => {
 
-    document.body.style.backgroundColor = backgroundColors[color];
+    if (backgroundColors[color] === undefined) {
+        console.error("Invalid background color:", color);
+        document.body.style.backgroundColor = "#555";
+        return;
+    }
+
+    if (typeof backgroundColors[color] == 'object'){
+
+        // Try to change background image
+        const assetPath = `backgrounds/${backgroundColors[color].url}`;
+
+        document.body.style.backgroundImage = `url(${assetPath})`;
+        document.body.style.backgroundColor = backgroundColors[color].colour || "#555";
+    }
+    else {
+
+        document.body.style.backgroundColor = backgroundColors[color];
+        document.body.style.backgroundImage = "none";
+    }
+
     localStorage.setItem("sagiri-portfolio-bg-color", color);
 }
 

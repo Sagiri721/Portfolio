@@ -106,6 +106,7 @@ const closeProgram = (pid) => {
 
 const closeAllPrograms = () => {
     processes.value.forEach(process => {
+
         process.dialog.unmount();
         document.getElementById("desktop").removeChild(process.element);
     });

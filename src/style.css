@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'Ms Sans Serif 1';
+    src: url('ms-sans-serif-1.otf');
+}
+
+@font-face {
+    font-family: 'Ms Sans Serif 2';
+    src: url('ms-sans-serif-2.ttf');
+}
+
+@font-face {
+    font-family: 'Ms Sans Serif 5';
+    src: url('ms-sans-serif-5.ttf');
+}
 body {
     background-color: #555;
     -webkit-user-select: none; /* Safari */
@@ -7,10 +21,17 @@ body {
 
     overflow: hidden;
 
+    background-repeat: no-repeat;
+    background-size: cover;
+
     /* cursor: url('cursors/Win95Def.png'), default;
     cursor: url('cursors/Win95DefHand.png'), help;
     cursor: url('cursors/Win95DefLoad.png'), wait;
     cursor: url('cursors/Win95DefHand.png'), grab; */
+}
+
+* {
+    font-family: 'Ms Sans Serif 2', sans-serif;
 }
 
 .tree-view > li {

@@ -1,8 +1,6 @@
 <script setup>
 
 import MenuBar from '../components/MenuBar.vue';
-import Music from '../components/Music.vue';
-import { usePrograms } from '../composables/Programs';
 import { generateId, loadBackgroundColor } from '../data/Utils';
 
 loadBackgroundColor();

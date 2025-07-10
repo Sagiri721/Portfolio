@@ -10,6 +10,10 @@ function openMusicPlayer() {
     program.openProgram('music', generateId());
 }
 
+function openInfo() {
+    program.openProgram('system', generateId());
+}
+
 // Open image
 /*program.openProgram("images", generateId(), {
     url: "/Portfolio/img/Cropped_Image.jpg", title: "A picture of me", width: 300,
@@ -49,6 +53,7 @@ function openMusicPlayer() {
         
                     <p>Without further ado, Welcome to my portfolio! I hope you enjoy your stay. <br> Listen to some music while you're here!</p> 
                     <button @click="openMusicPlayer"> Open the music player </button>
+                    <button @click="openInfo"> Customize your system </button>
         
                     <br><br>
                     <div class="status-bar">

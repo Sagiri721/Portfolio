@@ -72,11 +72,22 @@ onMounted(() => {
 
     const windowElement = document.getElementById(props.id + '-window');
 
-    const thisWindowWidth = (dimensions.value.width? dimensions.value.width : windowElement.clientWidth) + MARGIN;
-    const thisWindowHeight = (dimensions.value.height? dimensions.value.height : windowElement.clientHeight) + MARGIN;
+    var thisWindowWidth = (dimensions.value.width? dimensions.value.width : windowElement.clientWidth) + MARGIN;
+    var thisWindowHeight = (dimensions.value.height? dimensions.value.height : windowElement.clientHeight) + MARGIN;
 
-    const windowXX = window.innerWidth - thisWindowWidth;
-    const windowYY = window.innerHeight - thisWindowHeight;
+    const zoomValue = document.body.style.zoom || 1;
+    let zoomPercentage = 1; // Default zoom value
+    if (typeof zoomValue === 'string' && zoomValue.endsWith('%')) 
+        zoomPercentage = parseFloat(zoomValue) / 100;
+
+    console.log('Zoom percentage:', zoomPercentage);
+
+    // Use zoom to reduce window accordingly
+    const availableWidth = window.innerWidth / zoomPercentage;
+    const availableHeight = window.innerHeight / zoomPercentage;
+
+    const windowXX = availableWidth - thisWindowWidth;
+    const windowYY = availableHeight - thisWindowHeight;
 
     return {
         x: Math.floor(Math.random() * windowXX),
