@@ -44,7 +44,7 @@ function closeMe() {
         <div>
 
             <div class="gap">
-                <img :src="'icons/' + warnings[props.type]" alt="Warning icon" />
+                <img class="warning-icon" :src="'icons/' + warnings[props.type]" alt="Warning icon" />
                 <p>{{ props.message }}</p>
             </div>
 

@@ -25,6 +25,15 @@ onMounted(() => {
         url: "img/Cropped_Image.jpg", title: "A picture of me", width: 300,
         start_position: { x:330 , y: 10 }
     });
+    
+    // Check if was opened on phone
+    if ((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)))
+        openProgram("warning", {message: "This website is not optimized for mobile devices. Please use a desktop browser for the best experience.", type: 2, 
+            start_position: {
+                x: window.innerWidth / 2 - 120,
+                y: window.innerHeight / 2 - 100
+            }
+        });
 });
 
 // CPU usage update

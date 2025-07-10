@@ -124,6 +124,12 @@ body {
     animation: openWindow 0.2s ease-out;
 }
 
+.warning-icon {
+    width: 40% !important;
+    height: 40% !important;
+    margin: auto;
+}
+
 /*
     Open window animation
 */
