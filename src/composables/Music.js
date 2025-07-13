@@ -17,44 +17,58 @@ const songCollection = [
     {
         name: "Everyone Knows",
         artist: "Slowdive",
+        credit: "https://open.spotify.com/album/1qDA0jVhj4ZTjGHmpbmmwa?si=wbA5ZVzDTPS1bGLs8yqRJg",
         image: "covers/slowdive.jpg",
         song: "songs/everyone-knows.mp3",
     },
     {
         name: "Hold on",
         artist: "John Lennon",
+        credit: "https://open.spotify.com/album/0DFYbYCcHCEJPcN1hODG6K?si=xwcXeudDT4e0XBI2sBTi4w",
         image: "covers/plastic-ono-band.jpg",
         song: "songs/hold-on.mp3",
     },
     {
         name: "Chocolate Matter",
         artist: "Sweet Trip",
+        credit: "https://open.spotify.com/album/0eUUQ4rly8Q8PyJPWLgde2?si=wa0E7nNsRUCHIHTS8RNixA",
         image: "covers/velocity-design-comfort.png",
         song: "songs/chocolatte-matter.mp3",
     },
     {
         name: "Dear Prudence",
         artist: "Siouxsie and the Banshees",
+        credit: "https://open.spotify.com/album/0PF97T9K2E95PV4AbICNjr?si=nClOO4dUS6G6tZI0JEgA9A",
         image: "covers/hyaena.jpg",
         song: "songs/dear-prudence.mp3",
     },
     {
         name: "Mayonaise",
         artist: "The Smashing Pumpkins",
+        credit: "https://open.spotify.com/album/2Qs2SpclDToB087fLolhCN?si=4LLJN1XMQky_gAPO16Lepg",
         image: "covers/siamese-dream.jpg",
         song: "songs/mayonaise.mp3",
     },
     {
         name: "Pictures of You",
         artist: "The Cure",
+        credit: "https://open.spotify.com/album/6DZNOsLXIU2zOQfQDwDpIS?si=5-NB35xbSZ-iMDNAiJiTJA",
         image: "covers/disintegration.jpg",
         song: "songs/pictures-of-you.mp3",
     },
     {
         name: "The great gig in the sky",
         artist: "Pink Floyd",
+        credit: "https://open.spotify.com/album/4LH4d3cOWNNsVw41Gqt2kv?si=wyXw1x71TGyp0Ac6xWNRBw",
         image: "covers/dark-side-of-the-moon.png",
         song: "songs/the-great-gig-in-the-sky.mp3",
+    },
+    {
+        name: "Xtal",
+        artist: "Aphex Twin",
+        credit: "https://open.spotify.com/album/7aNclGRxTysfh6z0d8671k?si=EVKLeV-_Tdm87NrmUvjNVQ",
+        image: "covers/selected-ambient-works.png",
+        song: "songs/xtal.mp3",
     }
 ];
 

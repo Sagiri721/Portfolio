@@ -18,6 +18,8 @@ import HungerTower from "../components/Projects/HungerTower.vue";
 import CelesteMods from "../components/Projects/CelesteMods.vue";
 import ImageDisplay from "../components/ImageDisplay.vue";
 import NetworkManager from "../components/NetworkManager.vue";
+import PDFViewer from "../components/PDFViewer.vue";
+import Life from "../components/Life.vue";
 
 const programMapping = ref({});
 const processes = ref([]);
@@ -45,6 +47,8 @@ registerApplication("hungertower", HungerTower);
 registerApplication("celestemods", CelesteMods);
 registerApplication("images", ImageDisplay);
 registerApplication("network", NetworkManager);
+registerApplication("pdfviewer", PDFViewer);
+registerApplication("life", Life);
 
 const doesProgramExist = (name) => {
     return programMapping.value[name] !== undefined;

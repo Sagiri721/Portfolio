@@ -11,14 +11,19 @@ const props = defineProps(['id']);
 fetch(apiURL, {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' }
-})
+    })
     .then(response => response.json())
     .then(result => {
         data.value = {
             content: result.content,
             author: result.author
         };
-    });
+    })
+    .catch(error => {
+        console.error("Error fetching quote:", error);
+        data.value = { content: "Failed to load quote, try opening this and come back: " + apiURL, author: "Me" };
+    }
+);
     
 </script>
 

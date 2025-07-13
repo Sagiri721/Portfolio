@@ -54,6 +54,8 @@ const onKeyDown = (e) => {
         handleTabCompletion();
         break;
     }
+
+    scrollToBottom();    
 };
 
 const navigateHistory = (direction) => {
@@ -100,6 +102,11 @@ onMounted(() => {
     type: 'system',
     content: 'Welcome to SagiriDOS Prompt ' + getVersion() + ' \nType "help" for available commands.'
   });
+
+  // Focus input automatically
+  const input = terminalRef.value.querySelector('input');
+  if (input) input.focus();
+
 });
 </script>
 

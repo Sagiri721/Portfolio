@@ -95,28 +95,28 @@ const tab = ref('pl');
                 <div class="game-group">
                     <div class="game-icon-group ">
                         <p>Raylib</p>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Raylib_logo.png" alt="Raylib icon">
+                        <img src="../assets/raylib.png" alt="Raylib icon">
                     </div>
                 </div>
 
                 <div class="game-group">
                     <div class="game-icon-group ">
                         <p>Unity</p>
-                        <img src="https://static-00.iconduck.com/assets.00/unity-icon-999x1024-kgzo1ar1.png" alt="Unity icon">
+                        <img src="../assets/unity.png" alt="Unity icon">
                     </div>
                 </div>
 
                 <div class="game-group">
                     <div class="game-icon-group ">
-                        <p>Godot</p>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg" alt="Godot icon">
+                        <p>GameMaker Studio</p>
+                        <img src="../assets/gamemaker.webp" alt="Gamemaker">
                     </div>
                 </div>
 
                 <div class="game-group">
                     <div class="game-icon-group ">
                         <p>LibGDX</p>
-                        <img src="https://libgdx.com/assets/brand/stacked.png" alt="LibGDX icon">
+                        <img src="../assets/lib-gdx.png" alt="LibGDX icon">
                     </div>
                 </div>
             </div>
@@ -175,6 +175,7 @@ const tab = ref('pl');
                                         <div>
                                             <li>Pandas</li>
                                             <li>Scipy</li>
+                                            <li>MicroPython</li>
                                         </div>
                                     </div>
                                 </ul>

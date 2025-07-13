@@ -66,7 +66,7 @@ onUnmounted(() => {
 
     <div>
         <p class="name">{{ queue[current].name }}</p> 
-        <p class="artist">{{ queue[current].artist }}</p>
+        <p class="artist"> <a target="_blank" :href="queue[current].credit">{{ queue[current].artist }}</a></p>
 
         <img class="album center bevel" :src="queue[current].image" alt="album cover">
         <br>

@@ -30,7 +30,7 @@ body {
     cursor: url('cursors/Win95DefHand.png'), grab; */
 }
 
-* {
+*:not(.terminal-container, .terminal-container *) {
     font-family: 'Ms Sans Serif 2', sans-serif;
 }
 
@@ -66,6 +66,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content:space-between;
+}
+
+.left {
+    gap: 20px;
+    justify-content: left;
 }
 
 .center {

@@ -18,7 +18,7 @@ function openProgram(name, options = {}) {
 
 onMounted(() => {
 
-    openProgram("zoom", {start_position: { x: 10, y: 470 } });
+    openProgram("zoom", {start_position: { x: 10, y: 500 } });
 
     openProgram("me", {start_position: { x: 680, y: 10 } });
     openProgram("images", {
@@ -75,7 +75,11 @@ setInterval(() => {
                 <li @click="openProgram('technical')">Technical qualifications</li>
                 <li @click="openProgram('achievements')">Achievements</li>
                 <li @click="openProgram('network')">Contact</li>
-                <li><a href='tiagobarrossimoes_cv_09_5_2025.pdf'>Curriculum Vitae</a></li>
+                <li @click="openProgram('pdfviewer', {
+                    url: 'tiagobarrossimoes_cv_09_5_2025.pdf',
+                    title: 'Curriculum Vitae',
+                    filename: 'tiagobarrossimoes_cv_09_5_2025.pdf'
+                })">Curriculum Vitae</li>
                 </ul>
             </li>
             <li>
@@ -111,6 +115,7 @@ setInterval(() => {
                     <li @click="openProgram('music')">Waveform music player</li>
                     <!--<li @click="openProgram('explorer', {url: 'about:blank'})">Internet explorer</li>-->
                     <li @click="openProgram('prompt')">Terminal</li>
+                    <li @click="openProgram('life')">Life</li>
                 </ul>
                 </details>
             </li>
