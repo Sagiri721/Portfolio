@@ -69,6 +69,7 @@ const saveBackground = (e) => {
             <option>Biblically accurate</option>
             <option>Wrong era</option>
             <option>Frutiger Aero</option>
+            <option>Wrong company?</option>
         </select>
     </div>
    

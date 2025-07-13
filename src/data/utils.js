@@ -3,7 +3,7 @@ const generateId = () => {
 }
 
 const getVersion = () => {
-    return '1.2.0';
+    return '1.3.5';
 }
 
 const loadBackgroundColor = () => {
@@ -32,6 +32,10 @@ const backgroundColors = {
         "url": "asadal_stock_79.jpg",
         "colour": "darkblue"
     },
+    "Wrong company?": {
+        "url": "10-12--thumb.jpg",
+        "colour": "brown"
+    },
 }
 
 const changeBackground = (color) => {
@@ -44,7 +48,6 @@ const changeBackground = (color) => {
 
     if (typeof backgroundColors[color] == 'object'){
 
-        // Try to change background image
         const assetPath = `backgrounds/${backgroundColors[color].url}`;
 
         document.body.style.backgroundImage = `url(${assetPath})`;
