@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Ms Sans Serif 1';
-    src: url('ms-sans-serif-1.otf');
+    src: url('/public/MSSansSerif1.woff');
 }
 
 @font-face {
     font-family: 'Ms Sans Serif 2';
-    src: url('ms-sans-serif-2.ttf');
+    src: url('/public/MSSansSerif2.woff');
 }
 
 @font-face {
     font-family: 'Ms Sans Serif 5';
-    src: url('ms-sans-serif-5.ttf');
+    src: url('/public/MSSansSerif5.woff');
 }
 body {
     background-color: #555;
