@@ -20,6 +20,7 @@ import ImageDisplay from "../components/ImageDisplay.vue";
 import NetworkManager from "../components/NetworkManager.vue";
 import PDFViewer from "../components/PDFViewer.vue";
 import Life from "../components/Life.vue";
+import LEDDriver from "../components/Projects/LEDDriver.vue";
 
 const programMapping = ref({});
 const processes = ref([]);
@@ -49,6 +50,7 @@ registerApplication("images", ImageDisplay);
 registerApplication("network", NetworkManager);
 registerApplication("pdfviewer", PDFViewer);
 registerApplication("life", Life);
+registerApplication("ledriver", LEDDriver);
 
 const doesProgramExist = (name) => {
     return programMapping.value[name] !== undefined;

@@ -90,6 +90,16 @@ setInterval(() => {
 
                     <li>
                         <details open>
+                        <summary>Electronics</summary>
+                        
+                        <ul>
+                            <li @click="openProgram('ledriver')">LEDC68 Driver</li>
+                        </ul>
+                        </details>
+                    </li>
+
+                    <li>
+                        <details open>
                         <summary>Games</summary>
                         
                         <ul>
