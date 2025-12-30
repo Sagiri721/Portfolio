@@ -18,7 +18,7 @@ function openProgram(name, options = {}) {
 
 onMounted(() => {
 
-    openProgram("zoom", {start_position: { x: 10, y: 500 } });
+    openProgram("zoom", {start_position: { x: 10, y: 550 } });
 
     openProgram("me", {start_position: { x: 680, y: 10 } });
     openProgram("images", {
@@ -76,9 +76,9 @@ setInterval(() => {
                 <li @click="openProgram('achievements')">Achievements</li>
                 <li @click="openProgram('network')">Contact</li>
                 <li @click="openProgram('pdfviewer', {
-                    url: 'tiagobarrossimoes_cv_09_5_2025.pdf',
+                    url: 'tiagobarrossimoes_cv_28_12_2025.pdf',
                     title: 'Curriculum Vitae',
-                    filename: 'tiagobarrossimoes_cv_09_5_2025.pdf'
+                    filename: 'tiagobarrossimoes_cv_28_12_2025.pdf'
                 })">Curriculum Vitae</li>
                 </ul>
             </li>
@@ -110,8 +110,18 @@ setInterval(() => {
                         </details>
                     </li>
 
-                    <li @click="openProgram('himawari')">Himawari2D</li>
-                    <li @click="openProgram('glvne')">GLVNE</li>
+                    <li>
+                        <details open>
+                        <summary>Academic</summary>
+                        
+                        <ul>
+                            <li @click="openProgram('himawari')">Himawari2D</li>
+                            <li @click="openProgram('shodrone')">Shodrone</li>
+                            <li @click="openProgram('portit')">PorTiT</li>
+                        </ul>
+                        </details>
+                    </li>
+
                     <li @click="openProgram('renderer')">Basic 3D renderer</li>
                     <li @click="openProgram('chara-arquive')">Character archive</li>
                 </ul>
@@ -125,6 +135,7 @@ setInterval(() => {
                     <li @click="openProgram('music')">Waveform music player</li>
                     <!--<li @click="openProgram('explorer', {url: 'about:blank'})">Internet explorer</li>-->
                     <li @click="openProgram('prompt')">Terminal</li>
+                    <!-- <li @click="openProgram('blog')">Blog</li> -->
                     <li @click="openProgram('life')">Life</li>
                 </ul>
                 </details>

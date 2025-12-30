@@ -18,13 +18,26 @@ const props = defineProps(['id']);
     <p>The mod comprises of a custom stage which makes use of custom mechanics. I take no credit for the art, music, etc. Only the level design</p>
     
     <a href="https://gamebanana.com/mods/572524"><img class="full-image bevel" src="https://gamebanana.com/mods/embeddables/572524?type=large"/></a>
-
+    
     <hr>
-
-
+    
     <div class="status-bar">
         <p class="status-bar-field">Made for <a href="https://store.steampowered.com/app/504230/Celeste/">Celeste</a></p>
         <a href="https://gamebanana.com/mods/572524" class="status-bar-field">Visit Gamebanana page!</a>
+    </div>
+    
+    <br>
+    
+    <h4>Epileptic Prophecy </h4>
+    <p>Epileptic Prophecy is a longer mod that is all around much more refined, both in graphics and level design</p>
+
+    <a href="https://gamebanana.com/mods/617759"><img class="full-image bevel" src="https://gamebanana.com/mods/embeddables/617759?type=large"/></a>
+
+    <hr>
+
+    <div class="status-bar">
+        <p class="status-bar-field">Made for <a href="https://store.steampowered.com/app/504230/Celeste/">Celeste</a></p>
+        <a href="https://gamebanana.com/mods/617759" class="status-bar-field">Visit Gamebanana page!</a>
     </div>
     <br>
 

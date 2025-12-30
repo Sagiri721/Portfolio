@@ -37,13 +37,11 @@ function openInfo() {
 
                 <div class="subtitle">
                     <h3>Hi! I'm Tiago </h3>
-                    <p>Also known as Sagiri721 on the net</p>
                 </div>
 
                 <p class="body">
-                    I'm a {{ myAge() }} years old Computer Science student.
-                    I'm passionate about <b>game development</b>, <b>graphics programming</b> and <b>systems programming</b>! <br>
-                    I also have a soft spot for <b>math</b>, <b>illustration</b> and <b>music.</b><br>
+                    I'm a {{ myAge() }}, a software engineering student focused on <strong>graphics and systems programming</strong>,
+                    with a strong interest in <strong>game development</strong> and <strong>video-game modding</strong>. I am experienced in building <strong>custom engines</strong>, <strong>rendering systems</strong>, and <strong>backend services</strong>. I'm particularly interested in systems design, computer graphics, operating systems, and mathematics, and I also enjoy traditional painting and electronics outside of coding.
         
                     I learned to code with GameMaker 7 when I was around 14 and I've been making stuff ever since.
                 </p>

@@ -82,6 +82,7 @@ const tab = ref('pl');
                             <li>Pascal</li>
                             <li>VBA</li>
                             <li>GLSL</li>
+                            <li>Prolog</li>
                         </ul>
                 </div>
             </div>
@@ -143,6 +144,8 @@ const tab = ref('pl');
                                         </div>
                                         <div>
                                             <li>LWJGL</li>
+                                            <li>JPA</li>
+                                            <li>JUnit</li>
                                         </div>
 
                                     </div>
@@ -155,8 +158,17 @@ const tab = ref('pl');
                                 <img src="../assets/csharp.png" alt="C# icon">
 
                                 <ul>
-                                    <li>.NET</li>
-                                    <li>Windows Forms</li>
+                                    <div class="columns close">
+
+                                        <div>
+                                            <li>.NET</li>
+                                            <li>Windows Forms</li>
+                                            <li>XUnit</li>
+                                        </div>
+                                        <div>
+                                            <li>EFCore</li>
+                                        </div>
+                                    </div> 
                                 </ul>
                             </div>
                         </div>

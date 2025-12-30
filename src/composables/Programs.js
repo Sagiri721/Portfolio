@@ -7,7 +7,6 @@ import Music from "../components/Music.vue";
 import Himawari from "../components/Projects/Himawari.vue";
 import CharaArchive from "../components/Projects/CharaArchive.vue";
 import Renderer from "../components/Projects/Renderer.vue";
-import GLVNE from "../components/Projects/GLVNE.vue";
 import Technical from "../components/Technical.vue";
 import Warning from "../components/Warning.vue";
 import Achievements from "../components/Achievements.vue";
@@ -21,10 +20,15 @@ import NetworkManager from "../components/NetworkManager.vue";
 import PDFViewer from "../components/PDFViewer.vue";
 import Life from "../components/Life.vue";
 import LEDDriver from "../components/Projects/LEDDriver.vue";
+import Blog from "../components/Blog/Blog.vue";
+import Comments from "../components/Blog/Comments.vue";
+import AccessibilityMenu from "../components/Blog/AccessibilityMenu.vue";
+import Shodrone from "../components/Projects/Shodrone.vue";
+import Portit from "../components/Projects/Portit.vue";
 
 const programMapping = ref({});
 const processes = ref([]);
-const registerApplication = (name, program, options = { singleton: false }) => {
+const registerApplication = (name, program, options = { singleton: false, private: false }) => {
     programMapping.value[name] = { program, options };
 }
 
@@ -37,20 +41,23 @@ registerApplication("music", Music, { singleton: true });
 registerApplication("himawari", Himawari);
 registerApplication("chara-arquive", CharaArchive);
 registerApplication("renderer", Renderer);
-registerApplication("glvne", GLVNE);
 registerApplication("technical", Technical);
-registerApplication("warning", Warning);
+registerApplication("warning", Warning, {private: true});
 registerApplication("achievements", Achievements);
 registerApplication("me", Me);
 registerApplication("zoom", Zoom, { singleton: true });
 registerApplication("nonamegame", NoNameGame);
 registerApplication("hungertower", HungerTower);
 registerApplication("celestemods", CelesteMods);
-registerApplication("images", ImageDisplay);
+registerApplication("images", ImageDisplay, {private: true});
 registerApplication("network", NetworkManager);
-registerApplication("pdfviewer", PDFViewer);
+registerApplication("pdfviewer", PDFViewer, { private: true});
 registerApplication("life", Life);
 registerApplication("ledriver", LEDDriver);
+registerApplication("blog", Blog);
+registerApplication("shodrone", Shodrone)
+registerApplication("portit", Portit)
+registerApplication("accessibility_settings", AccessibilityMenu, {private: true, singleton: true});
 
 const doesProgramExist = (name) => {
     return programMapping.value[name] !== undefined;
@@ -104,6 +111,9 @@ const closeProgram = (pid) => {
     const process = processes.value.find(process => process.pid === pid);
     if (process == undefined) return;
 
+    console.log(pid);
+    console.log(process);
+
     process.dialog.unmount();
     document.getElementById("desktop").removeChild(process.element);
 
@@ -151,8 +161,22 @@ export const usePrograms = () => {
         closeAllPrograms,
         processCount,
         doesProgramExist,
-        getProgramNames: () => Object.keys(programMapping.value),
+        getProgramNames: () => {
+            
+            var programNames = [];
+            for (const name in programMapping.value) {
+                if (!programMapping.value[name].options?.private) 
+                    programNames.push(name);
+            }
+
+            return programNames;
+        },
         requestFocus,
         isFocused,
+        isPrivate: (program) => {
+
+            console.log(program)
+            return false;
+        }
     }
 }

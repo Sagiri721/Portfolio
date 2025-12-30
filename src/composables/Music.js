@@ -64,11 +64,11 @@ const songCollection = [
         song: "songs/the-great-gig-in-the-sky.mp3",
     },
     {
-        name: "Xtal",
-        artist: "Aphex Twin",
-        credit: "https://open.spotify.com/album/7aNclGRxTysfh6z0d8671k?si=EVKLeV-_Tdm87NrmUvjNVQ",
-        image: "covers/selected-ambient-works.png",
-        song: "songs/xtal.mp3",
+        name: "I Never Liked You",
+        artist: "Don Caballero",
+        credit: "https://open.spotify.com/album/3y1aPtqR1BkUXAaOUoDCRo?si=f-v0Soq-RjOiJVJfNcZx9Q",
+        image: "covers/american-don.jpg",
+        song: "songs/i-never-liked-you.mp3",
     }
 ];
 

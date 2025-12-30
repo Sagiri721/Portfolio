@@ -1,0 +1,128 @@
+/* public/giscus-98.css */
+:root {
+    --color-prettylights-syntax-comment: #008000;
+    --color-prettylights-syntax-constant: #0000ff;
+    --color-prettylights-syntax-entity: #800080;
+    --color-prettylights-syntax-storage-modifier-import: #000000;
+    --color-prettylights-syntax-entity-tag: #800000;
+    --color-prettylights-syntax-keyword: #0000ff;
+    --color-prettylights-syntax-string: #a31515;
+    --color-prettylights-syntax-variable: #001080;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #ff0000;
+    --color-prettylights-syntax-invalid-illegal-text: #ffffff;
+    --color-prettylights-syntax-invalid-illegal-bg: #ff0000;
+    --color-prettylights-syntax-carriage-return-text: #ffffff;
+    --color-prettylights-syntax-carriage-return-bg: #ff0000;
+    --color-prettylights-syntax-string-regexp: #811f3f;
+    --color-prettylights-syntax-markup-list: #000000;
+    --color-prettylights-syntax-markup-heading: #0000ff;
+    --color-prettylights-syntax-markup-italic: #000000;
+    --color-prettylights-syntax-markup-bold: #000000;
+    --color-prettylights-syntax-markup-deleted-text: #ff0000;
+    --color-prettylights-syntax-markup-deleted-bg: #ffeef0;
+    --color-prettylights-syntax-markup-inserted-text: #008000;
+    --color-prettylights-syntax-markup-inserted-bg: #f0fff4;
+    --color-prettylights-syntax-markup-changed-text: #e36209;
+    --color-prettylights-syntax-markup-changed-bg: #ffebda;
+    --color-prettylights-syntax-markup-ignored-text: #c0c0c0;
+    --color-prettylights-syntax-markup-ignored-bg: #c0c0c0;
+    --color-prettylights-syntax-meta-diff-range: #800080;
+    --color-prettylights-syntax-brackethighlighter-angle: #000000;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #808080;
+    --color-prettylights-syntax-constant-other-reference-link: #0000ff;
+    
+    /* Main colors */
+    --color-fg-default: #000000;
+    --color-fg-muted: #000000;
+    --color-fg-subtle: #000000;
+    --color-canvas-default: #c0c0c0;
+    --color-canvas-subtle: silver;
+    --color-border-default: #808080;
+    --color-border-muted: #808080;
+    --color-neutral-muted: rgba(128, 128, 128, 0.2);
+    --color-accent-fg: #000080;
+    --color-accent-emphasis: #000080;
+    --color-success-fg: #008000;
+    --color-attention-fg: #808000;
+    --color-danger-fg: #800000;
+    --color-primer-shadow-inset: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff;
+    --color-scale-gray-1: #c0c0c0;
+    --color-scale-blue-1: #dfe8f7;
+  }
+  
+  /* Main container */
+  main {
+    background: #c0c0c0 !important;
+    font-family: 'MS Sans Serif', Arial, sans-serif !important;
+    font-size: 11px !important;
+  }
+  
+  /* Comments container */
+  .gsc-comments {
+    background: #c0c0c0 !important;
+    border: none !important;
+  }
+  
+  /* Individual comment */
+  .gsc-comment {
+    background: silver !important;
+    border: 2px outset silver !important;
+    padding: 4px !important;
+    margin-bottom: 4px !important;
+  }
+  
+  .gsc-comment-content {
+    background: white !important;
+    border: 2px inset #dfdfdf !important;
+    padding: 4px !important;
+  }
+  
+  /* Buttons */
+  button, .gsc-button {
+    background: silver !important;
+    border: 2px outset silver !important;
+    padding: 2px 8px !important;
+    font-family: 'MS Sans Serif', Arial, sans-serif !important;
+    font-size: 11px !important;
+    color: #000000 !important;
+    cursor: pointer !important;
+  }
+  
+  button:active, .gsc-button:active {
+    border-style: inset !important;
+  }
+  
+  /* Textarea */
+  textarea, input[type="text"] {
+    background: white !important;
+    border: 2px inset #dfdfdf !important;
+    padding: 2px !important;
+    font-family: 'MS Sans Serif', Arial, sans-serif !important;
+    font-size: 11px !important;
+  }
+  
+  /* Reactions */
+  .gsc-reactions-count {
+    background: silver !important;
+    border: 2px outset silver !important;
+    font-family: 'MS Sans Serif', Arial, sans-serif !important;
+  }
+  
+  /* Header */
+  .gsc-header {
+    background: #000080 !important;
+    color: white !important;
+    padding: 2px 4px !important;
+    font-family: 'MS Sans Serif', Arial, sans-serif !important;
+    font-weight: bold !important;
+  }
+  
+  /* Links */
+  a {
+    color: #0000ff !important;
+    text-decoration: underline !important;
+  }
+  
+  a:visited {
+    color: #800080 !important;
+  }

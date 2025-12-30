@@ -18,7 +18,7 @@ const props = defineProps(['id']);
     <p>Although limited, Himawari is capable of powering basic games that don't require much computational power</p>
     <div class="status-bar">
         <p class="status-bar-field">Made using: Java, C++</p>
-        <p class="status-bar-field">Status: <span class="good">Released</span></p>
+        <p class="status-bar-field">Status: <span class="good">Finished</span></p>
         <p class="status-bar-field">Source: <a href="https://github.com/Sagiri721/Himawari-2d">Github</a></p>
     </div>
 

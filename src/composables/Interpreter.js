@@ -69,7 +69,7 @@ async function interpret(command) {
             if (args.length === 0) return "Invalid syntax, no program given.";
             const program = args[0];
 
-            if (!programs.doesProgramExist(program)) return "Program not found.";
+            if (!programs.doesProgramExist(program) || programs.isPrivate(program)) return "Program not found.";
             programs.openProgram(program, generateId());
 
             return program + " opened.";

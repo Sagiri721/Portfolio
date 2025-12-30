@@ -3,7 +3,7 @@ const generateId = () => {
 }
 
 const getVersion = () => {
-    return '1.3.5';
+    return '1.4.9';
 }
 
 const loadBackgroundColor = () => {
@@ -38,27 +38,53 @@ const backgroundColors = {
     },
 }
 
-const changeBackground = (color) => {
+const saveAccessibilitySettings = (settings) => {
+    localStorage.setItem("sagiri-portfolio-accessibility-settings", JSON.stringify(settings));
+}
 
+const loadAccessibilitySettings = () => {
+    const settings = localStorage.getItem("sagiri-portfolio-accessibility-settings");
+    return settings ? JSON.parse(settings) : null;
+}
+
+const effectAccessibilitySettings = (settings) => {
+    
+    const accSettings = loadAccessibilitySettings();
+    if (!accSettings) return;
+
+    document.documentElement.style.setProperty('--accessibility-font-size', accSettings.fontSize + 'px');
+    document.documentElement.style.setProperty('--accessibility-font-family', accSettings.fontFamily);
+    
+    document.documentElement.style.setProperty('--accessibility-text-color', '#FFFFFF');
+    document.documentElement.style.setProperty('--accessibility-background-color', '#000000');
+}
+
+const changeBackground = (color) => {
     if (backgroundColors[color] === undefined) {
         console.error("Invalid background color:", color);
         document.body.style.backgroundColor = "#555";
         return;
     }
-
     if (typeof backgroundColors[color] == 'object'){
-
         const assetPath = `backgrounds/${backgroundColors[color].url}`;
-
         document.body.style.backgroundImage = `url(${assetPath})`;
         document.body.style.backgroundColor = backgroundColors[color].colour || "#555";
+
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundAttachment = "fixed";
     }
     else {
-
         document.body.style.backgroundColor = backgroundColors[color];
         document.body.style.backgroundImage = "none";
-    }
 
+        // Reset background properties when using solid colors
+        document.body.style.backgroundSize = "";
+        document.body.style.backgroundPosition = "";
+        document.body.style.backgroundRepeat = "";
+        document.body.style.backgroundAttachment = "";
+    }
     localStorage.setItem("sagiri-portfolio-bg-color", color);
 }
 
@@ -93,4 +119,4 @@ const myAge = () => {
     return age;
 }
 
-export { generateId, getVersion, changeBackground, loadBackgroundColor, getBackgroundColor, formatTime, formatSeconds, myAge };
+export { generateId, getVersion, changeBackground, loadBackgroundColor, getBackgroundColor, formatTime, formatSeconds, myAge, saveAccessibilitySettings, loadAccessibilitySettings, effectAccessibilitySettings};

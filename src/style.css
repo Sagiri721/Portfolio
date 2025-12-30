@@ -12,6 +12,12 @@
     font-family: 'Ms Sans Serif 5';
     src: url('/public/MSSansSerif5.woff');
 }
+
+@font-face {
+    font-family: 'OpenDyslexia';
+    src: url('/public/OpenDyslexic-Regular.otf');
+}
+
 body {
     background-color: #555;
     -webkit-user-select: none; /* Safari */
@@ -30,7 +36,7 @@ body {
     cursor: url('cursors/Win95DefHand.png'), grab; */
 }
 
-*:not(.terminal-container, .terminal-container *) {
+*:not(.terminal-container, .terminal-container *, .post *) {
     font-family: 'Ms Sans Serif 2', sans-serif;
 }
 
@@ -57,6 +63,10 @@ body {
     pointer-events: none;
 }
 
+.flag {
+    vertical-align: middle;
+    margin-right: 8px;
+}
 
 .quote {
     text-align: center;
@@ -129,11 +139,44 @@ body {
     animation: openWindow 0.2s ease-out;
 }
 
-.warning-icon {
-    width: 40% !important;
-    height: 40% !important;
-    margin: auto;
+#welcome {
+    font-size: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    margin-bottom: 15px;
 }
+
+.rainbow-letter {
+    font-family: 'Ms Sans Serif 5', sans-serif;
+    display: inline-block;
+    font-weight: bold;
+    animation-name: wave, rainbow;
+    animation-duration: 1.5s, 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out, linear;
+    animation-delay: var(--delay), var(--delay);
+
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.7);
+}
+
+/* Wave animation */
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Rainbow animation */
+@keyframes rainbow {
+    0% { color: red; }
+    16% { color: orange; }
+    33% { color: yellow; }
+    50% { color: green; }
+    66% { color: blue; }
+    83% { color: indigo; }
+    100% { color: violet; }
+}  
 
 /*
     Open window animation

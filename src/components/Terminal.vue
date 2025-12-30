@@ -86,7 +86,7 @@ const handleTabCompletion = () => {
 
     const matches = commands.filter(cmd => cmd.startsWith(partial));
     if (matches.length === 1) {
-    currentCommand.value = matches[0];
+        currentCommand.value = matches[0];
     }
 };
 

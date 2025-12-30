@@ -1,7 +1,23 @@
 <script setup>
 import Window from './../Window.vue';
 
-const props = defineProps(['id']);    
+import img1 from '../../assets/projects/hungertower.png'
+import img2 from '../../assets/projects/hungertower-2.png';
+import Carousel from '../Carousel.vue';
+
+const props = defineProps(['id']);
+
+const slides = [
+    {
+        src: img1,
+        alt: '',
+    },
+    {
+        src: img2,
+        alt: '',
+    },
+];
+
 </script>
 
 <template>
@@ -10,14 +26,14 @@ const props = defineProps(['id']);
         title="Hunger tower"
         :resizeable="true"
         :closeable="true"
-        :size="{ width: 300, height: undefined }"
+        :size="{ width: 330, height: undefined }"
     >
     
     <h4>Hunger tower</h4>
     <p>Hunger Tower is a stealth game where you are a vampire trying to find a cure to your vampirism by exploring a tower filled with monsters.</p>
     <p>It was our submission to the FCUP GameJam 2024. Where the theme was "You are what you eat"</p>
     
-    <img class="full-image bevel" src="../../assets/projects/hungertower.png" alt="" srcset="">
+    <Carousel width="230" :slides="slides" />
 
     <hr>
 
