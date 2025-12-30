@@ -137,7 +137,6 @@ setInterval(() => {
                     <li @click="openProgram('prompt')">Terminal</li>
                     <!-- <li @click="openProgram('blog')">Blog</li> -->
                     <li @click="openProgram('life')">Life</li>
-                    <li @click="openProgram('ads')">Advertisement</li>
                 </ul>
                 </details>
             </li>
