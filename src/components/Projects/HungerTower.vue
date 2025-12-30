@@ -4,6 +4,7 @@ import Window from './../Window.vue';
 import img1 from '../../assets/projects/hungertower.png'
 import img2 from '../../assets/projects/hungertower-2.png';
 import Carousel from '../Carousel.vue';
+import FriendBadge from '../FriendBadge.vue';
 
 const props = defineProps(['id']);
 
@@ -42,7 +43,10 @@ const slides = [
         <p class="status-bar-field">C#</p>
         <a href="https://sagiri721.itch.io/hunger-tower" class="status-bar-field">Visit itch.io page!</a>
     </div>
-    <br>
+    <hr>
+
+    <h5>In collaboration with</h5>
+    <FriendBadge :list="['Mary']" />
 
     </Window>
 </template>
@@ -61,7 +65,12 @@ const slides = [
 h4 {
     text-align: center;
     font-size: 1.5em;
+}
 
+h5 {
+    font-size: 1.1em;
+    padding-bottom: 0;
+    margin-bottom: 10px;
 }
 
 .good {

@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import { usePrograms } from '../composables/Programs';
 import { changeBackground, getBackgroundColor, getVersion } from '../data/Utils';
 import Window from './Window.vue';
+import FriendBadge from './FriendBadge.vue';
 
 const props = defineProps(['id']);
 const programs = usePrograms();
@@ -71,7 +72,20 @@ const saveBackground = (e) => {
             <option>Frutiger Aero</option>
             <option>Wrong company?</option>
         </select>
+
+        <hr>
+
+        <h5>People you should checkout</h5>
+        <FriendBadge />
+
     </div>
    
     </Window>
 </template>
+
+<style scoped>
+h5 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+</style>

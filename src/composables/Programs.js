@@ -21,10 +21,10 @@ import PDFViewer from "../components/PDFViewer.vue";
 import Life from "../components/Life.vue";
 import LEDDriver from "../components/Projects/LEDDriver.vue";
 import Blog from "../components/Blog/Blog.vue";
-import Comments from "../components/Blog/Comments.vue";
 import AccessibilityMenu from "../components/Blog/AccessibilityMenu.vue";
 import Shodrone from "../components/Projects/Shodrone.vue";
 import Portit from "../components/Projects/Portit.vue";
+import Advertisement from "../components/Advertisement.vue";
 
 const programMapping = ref({});
 const processes = ref([]);
@@ -55,8 +55,9 @@ registerApplication("pdfviewer", PDFViewer, { private: true});
 registerApplication("life", Life);
 registerApplication("ledriver", LEDDriver);
 registerApplication("blog", Blog);
-registerApplication("shodrone", Shodrone)
-registerApplication("portit", Portit)
+registerApplication("shodrone", Shodrone);
+registerApplication("portit", Portit);
+registerApplication("ads", Advertisement);
 registerApplication("accessibility_settings", AccessibilityMenu, {private: true, singleton: true});
 
 const doesProgramExist = (name) => {
